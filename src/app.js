@@ -63,7 +63,7 @@ app.get('/weather', (req, res) => {
             }
 
             res.send({
-                forecast: `${forecastData.weather_descriptions}. It is currently ${forecastData.temperature} degrees out. Feels like ${forecastData.feelslike} degrees out. The humidity ${forecastData.humidity}%.`,
+                forecast: `${forecastData.weather_descriptions}. It is currently ${forecastData.temperature} degrees out. Feels like ${forecastData.feelslike} degrees out. The humidity is ${forecastData.humidity}%.`,
                 location: data.location,
                 address: req.query.address,
                 icon: forecastData.weatherIcons,
