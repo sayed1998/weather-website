@@ -37,7 +37,6 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         name: 'Wasim Khan'
     })
 })
@@ -64,7 +63,7 @@ app.get('/weather', (req, res) => {
             }
 
             res.send({
-                forecast: `${forecastData.weather_descriptions}. It is currently ${forecastData.temperature} degrees out. Feels like ${forecastData.feelslike} degrees.`,
+                forecast: `${forecastData.weather_descriptions}. It is currently ${forecastData.temperature} degrees out. Feels like ${forecastData.feelslike} degrees out. The humidity ${forecastData.humidity}%.`,
                 location: data.location,
                 address: req.query.address,
                 icon: forecastData.weatherIcons,
